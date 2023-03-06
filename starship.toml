@@ -28,7 +28,7 @@ read_only = " "
 [status]
 disabled = false
 style = 'bg:#1d2230 fg:#ff0000'
-format = '[ (SIG$signal_name)($common_meaning )\($status\) ]($style)'
+format = '[ (SIG$signal_name)($common_meaning)( \($status\)) ]($style)'
 
 [cmd_duration]
 min_time = 15_000
