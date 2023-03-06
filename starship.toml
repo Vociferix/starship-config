@@ -5,6 +5,7 @@ $os\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
+$git_state\
 $git_status\
 $git_metrics\
 [](fg:#394260 bg:#1d2230)\
@@ -47,12 +48,23 @@ untracked = '\(untracked files\) '
 staged = '\(staged\) '
 format = '[[($conflicted$untracked$staged)](fg:#769ff0 bg:#394260)]($style)'
 
+[git_state]
+style = 'bg:#394260'
+rebase = 'rebasing'
+merge = 'merging'
+revert = 'reverting'
+cherry_pick = 'cherry picking'
+bisect = 'bisecting'
+am = 'mailbox merging'
+am_or_rebase = 'mailbox merging or rebasing'
+format = '[\($state( $progress_current/$progress_total)\) ](fg:#769ff0 bg:#394260)'
+
 [git_metrics]
 disabled = false
 added_style = 'fg:#00ff00 bg:#394260'
 deleted_style = 'fg:#ff0000 bg:#394260'
 only_nonzero_diffs = true
-format = '([+$added/-$deleted ](fg:#769ff0 bg:#394260))'
+format = '([(+$added )(-$deleted )](fg:#769ff0 bg:#394260))'
 
 [os]
 disabled = false
